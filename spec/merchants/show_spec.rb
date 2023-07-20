@@ -1,8 +1,8 @@
 require "rails_helper"
 
 RSpec.describe "merchant show page" do 
-  xit "displays a list of items the merchant sells"  do 
-    visit merchant_path(1) 
+  it "displays a list of items the merchant sells"  do 
+    visit "/merchants/1"
     expect(page).to have_content(" ")
 
   end

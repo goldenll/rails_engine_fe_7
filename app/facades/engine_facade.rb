@@ -11,6 +11,18 @@ class EngineFacade
     end
   end
 
+  def merchant(id)
+    json = get_merchants.one_merchant(id)
+  end
+
+  # def merchant
+  #   require 'pry'; binding.pry
+  #   json = get_merchants.all_merchants
+  #   json[:data].map do |data|
+  #     Merchant.new(data)
+  #   end
+  # end
+
   # def initialize(id)
   #   @id = id
   # end

@@ -4,10 +4,10 @@ RSpec.describe "merchants index page" do
   it "displays a list of merchant names that link to their show page"  do 
     # visit merchants_path  
     visit "/merchants"
-    save_and_open_page
+
     expect(page).to have_link("Schroeder-Jerde")
     click_link "Schroeder-Jerde"
-    expect(current_path).to eq(merchant_path(1))
+    expect(current_path).to eq("/merchants/1")
   end
 end
 
