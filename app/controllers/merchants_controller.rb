@@ -4,9 +4,7 @@ class MerchantsController < ApplicationController
   end
 
   def show
-    require 'pry'; binding.pry
-    @merchant = EngineFacade.new.merchant(params[:id])
-    # @merchant = facade
+    @merchant_items = EngineFacade.new.merchant(params[:id])
+    # require 'pry'; binding.pry
   end
 end
-# (params[:id])

@@ -1,12 +1,10 @@
-require "json"
-
 class ReService
   def all_merchants
     get_url("/api/v1/merchants")
   end
 
   def one_merchant(id)
-    get_url("/api/v1/merchants/id")
+    get_url("/api/v1/merchants/#{id}/items")
   end
 
   def get_url(url)
